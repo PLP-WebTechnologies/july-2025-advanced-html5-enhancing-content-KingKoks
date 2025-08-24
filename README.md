@@ -1,43 +1,137 @@
-https://kingkoks.w3spaces.com# 📘 Assignment: Enhancing HTML5 Content & Mastering Forms
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced HTML Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+      line-height: 1.6;
+    }
+    form {
+      background: #f2f2f2;
+      padding: 1em;
+      border-radius: 5px;
+      max-width: 500px;
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.3em;
+    }
+    table {
+      border-collapse: collapse;
+      margin-top: 2em;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5em;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
 
-## Overview
+  <header>
+    <h1>User Registration</h1>
+    <p>Please fill out the form below to register.</p>
+  </header>
 
-This assignment focuses on elevating your HTML5 skills by working with advanced content elements and mastering the creation, structure, and validation of web forms. You will practice using lists, tables, and media to enrich page content, and then dive deep into building dynamic, user-friendly forms powered by native HTML5 features.
+  <main>
+    <form action="/submit" method="post" autocomplete="on">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="John Doe" required autocomplete="name">
 
-## Objectives
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" required autocomplete="email">
 
-You are expected to demonstrate the ability to:
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required minlength="6" placeholder="Enter a strong password">
 
-* Use lists and tables effectively to organize content for clarity and accessibility.
-* Embed media content such as images, audio, or video using semantic HTML5 elements.
-* Build structured HTML5 forms that are both usable and visually intuitive.
-* Apply various HTML5 form attributes to improve user interaction.
-* Use built-in validation techniques to minimize incorrect data input without relying on JavaScript.
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
 
-## Instructions
+      <label for="country">Country:</label>
+      <select id="country" name="country" required>
+        <option value="">Select your country</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+        <option value="canada">Canada</option>
+      </select>
 
-Design a simple multi-section web page that showcases the use of lists, tables, and media, followed by a complete HTML5 form. The page should reflect thoughtful structure, usability, and clarity.
+      <label for="bio">Short Bio:</label>
+      <textarea id="bio" name="bio" placeholder="Tell us a bit about yourself..." rows="4"></textarea>
 
-Your form should include various input types, make use of labels and fieldsets for accessibility, and apply HTML5 validation rules through attributes like `required`, `type`, `minlength`, `pattern`, and others.
+      <label for="readonly-field">Referral Code (readonly):</label>
+      <input type="text" id="readonly-field" value="REF12345" readonly>
 
-Avoid using JavaScript for validation—rely solely on native HTML5 capabilities.
+      <label>
+        <input type="checkbox" name="terms" required> I agree to the terms and conditions
+      </label>
 
-## Deliverables
+      <button type="submit">Register</button>
+    </form>
 
-Submit a single HTML file named `enhanced-form.html`. It should include:
+    <section>
+      <h2>What You'll Get:</h2>
+      <ul>
+        <li>Access to premium content</li>
+        <li>Monthly newsletter</li>
+        <li>Exclusive discounts</li>
+      </ul>
+    </section>
 
-* Well-structured content using lists, tables, and media.
-* A complete HTML5 form including a variety of input fields.
-* Correct use of form attributes such as `placeholder`, `required`, `autocomplete`, and `readonly`.
-* HTML5 validation features implemented correctly across all relevant fields.
-* A clear, accessible layout using semantic tags.
+    <section>
+      <h2>Sample Data Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Price</th>
+            <th>Features</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basic</td>
+            <td>$10</td>
+            <td>Email Support</td>
+          </tr>
+          <tr>
+            <td>Pro</td>
+            <td>$25</td>
+            <td>Priority Support, Analytics</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-## Tips
+    <section>
+      <h2>Welcome Video</h2>
+      <video controls width="400">
+        <source src="welcome.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
 
-* Proper and meaningful use of lists, tables, and media.
-* Clarity and accessibility of form structure.
-* Correct use of form elements and attributes.
-* Effective application of native HTML5 validation.
-* Clean, well-indented, and maintainable HTML code.
+    <section>
+      <h2>Sample Image</h2>
+      <img src="https://via.placeholder.com/400x200" alt="Sample placeholder image">
+    </section>
+  </main>
 
+  <footer>
+    <p>&copy; 2025 Your Company</p>
+  </footer>
 
+</body>
+</html>
